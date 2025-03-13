@@ -7,7 +7,6 @@ import Link from 'next/link'
 
 const MainNav = ({
     className,
-    ...props
 }: React.HTMLAttributes<HTMLElement>) => {
     const pathName = usePathname()
     const params = useParams()

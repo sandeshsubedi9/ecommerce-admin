@@ -96,7 +96,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({ initialData, categorie
             router.push(`/${parmas.storeId}/products`)
             toast.success(toastMessage)
         }
-        catch (error) {
+        catch {
             toast.error("Something went wrong")
         }
         finally {
@@ -112,7 +112,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({ initialData, categorie
             router.push(`/${parmas.storeId}/products`)
             toast.success("Product deleted")
         }
-        catch (error) {
+        catch {
             toast.error("Something went wrong")
         }
         finally {

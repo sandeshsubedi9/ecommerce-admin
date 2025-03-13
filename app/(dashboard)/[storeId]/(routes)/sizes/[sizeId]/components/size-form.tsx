@@ -63,7 +63,7 @@ export const SizeForm: React.FC<SizeFormProps> = ({ initialData }) => {
             router.push(`/${parmas.storeId}/sizes`)
             toast.success(toastMessage)
         }
-        catch (error) {
+        catch {
             toast.error("Something went wrong")
         }
         finally {
@@ -79,7 +79,7 @@ export const SizeForm: React.FC<SizeFormProps> = ({ initialData }) => {
             router.push(`/${parmas.storeId}/sizes`)
             toast.success("Size deleted")
         }
-        catch (error) {
+        catch {
             toast.error("Make sure you removed all products using this size first")
         }
         finally {
