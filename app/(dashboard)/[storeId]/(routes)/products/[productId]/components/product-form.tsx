@@ -168,7 +168,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({ initialData, categorie
                             </FormItem>
                         )}
                     />
-                    <div className="grid grid-cols-3 gap-8">
+                    <div className="grid sm:grid-cols-3 gap-8">
                         <FormField
                             control={form.control}
                             name="name"

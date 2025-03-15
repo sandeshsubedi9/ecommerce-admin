@@ -34,21 +34,42 @@ const ApiAlert: React.FC<ApiAlertProps> = ({
     }
 
     return (
+        // <Alert >
+        //     <Server className="h-4 w-4" />
+        //     <AlertTitle className="flex items-center gap-x-2">
+        //         {title}
+        //         <Badge variant={variantMap[variant]}>{textMap[variant]}</Badge>
+        //     </AlertTitle>
+        //     <AlertDescription className="mt-4 flex items-center justify-between">
+        //         <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold">
+        //             {description}
+        //         </code>
+        //         <Button variant="outline" size="icon" onClick={onCopy}>
+        //             <Copy className="h-4 w-4" />
+        //         </Button>
+        //     </AlertDescription>
+        // </Alert>
+
         <Alert>
             <Server className="h-4 w-4" />
             <AlertTitle className="flex items-center gap-x-2">
                 {title}
                 <Badge variant={variantMap[variant]}>{textMap[variant]}</Badge>
             </AlertTitle>
-            <AlertDescription className="mt-4 flex items-center justify-between">
-                <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold">
-                    {description}
-                </code>
-                <Button variant="outline" size="icon" onClick={onCopy}>
+            <AlertDescription className="mt-4 flex items-center">
+                {/* Wrapper to handle overflow */}
+                <div className="flex-1 overflow-auto">
+                    <code className="relative rounded w-fit bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold block whitespace-nowrap">
+                        {description}
+                    </code>
+                </div>
+                {/* Button stays fixed on the right */}
+                <Button variant="outline" size="icon" className="ml-2 flex-shrink-0" onClick={onCopy}>
                     <Copy className="h-4 w-4" />
                 </Button>
             </AlertDescription>
         </Alert>
+
     )
 }
 

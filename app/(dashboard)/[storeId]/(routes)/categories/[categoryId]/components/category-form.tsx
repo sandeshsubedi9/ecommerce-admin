@@ -120,7 +120,7 @@ export const CategoryForm: React.FC<CategoryFormProps> = ({ initialData, billboa
                 <form
                     className="space-y-8 w-full"
                     onSubmit={form.handleSubmit(onSubmit)}>
-                    <div className="grid grid-cols-3 gap-8">
+                    <div className="grid sm:grid-cols-3 gap-8">
                         <FormField
                             control={form.control}
                             name="name"
