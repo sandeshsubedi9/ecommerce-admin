@@ -128,10 +128,10 @@ export async function PATCH(req: Request, { params }: { params: Promise<{ storeI
     }
 }
 
-export async function DELETE(req: Request, { params }: { params: Promise<{ ProductId: string, storeId: string }> }) {
+export async function DELETE(req: Request, { params }: { params: Promise<{ productId: string, storeId: string }> }) {
     try {
         const { userId } = await auth()
-        const { storeId, ProductId } = await params
+        const { storeId, productId } = await params
 
         if (!userId) {
             return new NextResponse("Unauthenticated", { status: 401 })
@@ -141,7 +141,7 @@ export async function DELETE(req: Request, { params }: { params: Promise<{ Produ
             return new NextResponse("Store id is required", { status: 400 })
         }
 
-        if (!ProductId) {
+        if (!productId) {
             return new NextResponse("Product id is required", { status: 400 })
         }
 
@@ -158,7 +158,7 @@ export async function DELETE(req: Request, { params }: { params: Promise<{ Produ
 
         const product = await prismadb.product.deleteMany({
             where: {
-                id: ProductId,
+                id: productId,
             }
         })
 
