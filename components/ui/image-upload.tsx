@@ -49,7 +49,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
                     </div>
                 ))}
             </div>
-            <CldUploadWidget onSuccess={onUpload} uploadPreset="ecommerce">
+            <CldUploadWidget onSuccess={onUpload} uploadPreset="ecommerce" options={{ maxFiles: 5 }}>
                 {({ open }) => {
                     const onClick = () => {
                         open()

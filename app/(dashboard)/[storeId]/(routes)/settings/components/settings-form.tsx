@@ -128,6 +128,7 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({ initialData }) => {
             </Form>
             <Separator />
             <ApiAlert title="test" description={`${origin}/api/${parmas.storeId}`} variant="public"/>
+            <ApiAlert title="Your Store" description={`${process.env.NEXT_PUBLIC_FRONTEND_STORE_URL}?api=${origin}/api/${parmas.storeId}`} variant="public"/>
         </>
     )
 }

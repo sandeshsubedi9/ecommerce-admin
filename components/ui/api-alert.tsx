@@ -33,6 +33,10 @@ const ApiAlert: React.FC<ApiAlertProps> = ({
         toast.success("API Route copied to clipboard")
     }
 
+    const onClick = () => {
+        window.open(description, "_blank", "noopener,noreferrer");
+    }
+
     return (
         // <Alert >
         //     <Server className="h-4 w-4" />
@@ -56,9 +60,9 @@ const ApiAlert: React.FC<ApiAlertProps> = ({
                 {title}
                 <Badge variant={variantMap[variant]}>{textMap[variant]}</Badge>
             </AlertTitle>
-            <AlertDescription className="mt-4 flex items-center">
+            <AlertDescription  className="mt-4 flex items-center">
                 {/* Wrapper to handle overflow */}
-                <div className="flex-1 overflow-auto">
+                <div onClick={onClick} className= "flex-1 overflow-auto cursor-pointer ">
                     <code className="relative rounded w-fit bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold block whitespace-nowrap">
                         {description}
                     </code>

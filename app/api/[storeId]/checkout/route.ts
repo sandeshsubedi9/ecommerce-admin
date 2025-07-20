@@ -35,7 +35,7 @@ export async function POST(req: Request, {params}: {params: Promise<{storeId: st
         line_items.push({
             quantity: 1,
             price_data: {
-                currency: "USD",
+                currency: "NPR",
                 product_data: {
                     name: product.name
                 },
@@ -67,8 +67,8 @@ export async function POST(req: Request, {params}: {params: Promise<{storeId: st
         phone_number_collection: {
             enabled: true
         },
-        success_url: `${process.env.FRONTEND_STORE_URL}/cart?success=1`,
-        cancel_url: `${process.env.FRONTEND_STORE_URL}/cart?canceled=1`,
+        success_url: `${process.env.NEXT_PUBLIC_FRONTEND_STORE_URL}/cart?success=1`,
+        cancel_url: `${process.env.NEXT_PUBLIC_FRONTEND_STORE_URL}/cart?canceled=1`,
         metadata: {
             orderId: order.id
         }
