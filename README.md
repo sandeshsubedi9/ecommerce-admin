@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# E-Commerce Admin 🛍️📊
 
-## Getting Started
+A full-featured admin panel for managing multiple online stores, products, categories, orders, and real-time sales analytics.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🏪 Connected Storefront
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- There is a E-Commerce store a **separate Next.js project** connected to this admin dashboard via API routes.  
+- All products, categories, billboards, and other data created in the admin panel are automatically displayed in the storefront.  
+- This allows the admin dashboard to fully manage and update the live store without manual changes in the store project.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Live Demo
+(ctlr + click to open link in new tab)  
+- Admin Dashbaord: https://ecommerce-admin-horizon.vercel.app  
+- Ecommerce Store: https://ecommerce-store-horizon.vercel.app
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📌 Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Multi-store Management**
+  - Create and manage multiple stores
+  - Navigate to each store’s dedicated admin dashboard
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Product Management**
+  - Add, edit, and delete products
+  - Assign billboard, category, size, and color to products
+  - Paginated product list (10 per page, fetch remaining on demand)
 
-## Deploy on Vercel
+- **Order Tracking**
+  - View placed and paid orders from the frontend store
+  - Track available stock in real-time
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Analytics**
+  - Overview dashboard showing total sales revenue in bar graph
+  - Stock and sales insights
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Billboards & Categories**
+  - Create and manage billboards for promotions
+  - Manage product categories, sizes, and colors
+
+- **API Routes**
+  - Public GET endpoints
+  - Admin-only POST & DELETE endpoints for products, stores, billboards, categories, etc.
+
+## 🛠 Tech Stack
+
+- Next.js  
+- React  
+- Prisma  
+- Neon Database  
+- shadcn/ui  
+- Cloudinary (Image storage)
+- Clerk (Authentication)
+
+---
+
